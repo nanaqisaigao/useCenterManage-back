@@ -5,13 +5,13 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.useCenterManageback.model.domain.User;
 import com.example.useCenterManageback.service.UserService;
 import com.example.useCenterManageback.mapper.UserMapper;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.nio.charset.StandardCharsets;
 import java.security.NoSuchAlgorithmException;
 import java.util.Date;
@@ -42,33 +42,33 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     private UserMapper userMapper;
 
     @Override
-    public long userRegister(String userAccount, String userPassword, String checkPassword) throws NoSuchAlgorithmException {
+    public Long userRegister(String userAccount, String userPassword, String checkPassword) throws NoSuchAlgorithmException {
         //1.校验
         if (StringUtils.isAnyBlank(userAccount, userPassword, checkPassword)) {
-            return -1;
+            return  (long)-1;
         }
         if (userAccount.length() < 4) {
-            return -1;
+            return (long)-1;
         }
         if (userPassword.length() < 8 || checkPassword.length() < 8) {
-            return -1;
+            return (long)-1;
         }
         //账户不能包含特殊字符
         String validPattern = "\\pP|\\pS|\\s+";
         Matcher matcher = Pattern.compile(validPattern).matcher(userAccount);
         if (matcher.find()) {
-            return -1;
+            return (long)-1;
         }
         //密码重复性校验
         if (!userPassword.equals(checkPassword)) {
-            return -1;
+            return (long)-1;
         }
         //根据userAccount获取对象 这里查询了数据库   来验证账户不能重复
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("userAccount", userAccount);
-        long count = userMapper.selectCount(queryWrapper);
+        Long count = userMapper.selectCount(queryWrapper);
         if (count > 0) {
-            return -1;
+            return (long)-1;
         }
         //2.密码加密
         String passwordMD5 = DigestUtils.md5DigestAsHex((SALT + userPassword).getBytes(StandardCharsets.UTF_8));
@@ -84,7 +84,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     }
 
     @Override
-    public User doLogin(String userAccount, String userPassword, HttpServletRequest request) {
+    public User userLogin(String userAccount, String userPassword, HttpServletRequest request) {
         //1.校验
         if (StringUtils.isAnyBlank(userAccount, userPassword)) {
             log("用户名或密码为空");

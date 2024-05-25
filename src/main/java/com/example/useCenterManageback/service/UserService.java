@@ -2,8 +2,8 @@ package com.example.useCenterManageback.service;
 
 import com.example.useCenterManageback.model.domain.User;
 import com.baomidou.mybatisplus.extension.service.IService;
-import jakarta.servlet.http.HttpServletRequest;
 
+import javax.servlet.http.HttpServletRequest;
 import java.security.NoSuchAlgorithmException;
 
 /**
@@ -18,7 +18,7 @@ public interface UserService extends IService<User> {
      * @param checkPassword 校验密码
      * @return
      */
-    long userRegister(String userAccount, String userPassword, String checkPassword) throws NoSuchAlgorithmException;
+    Long userRegister(String userAccount, String userPassword, String checkPassword) throws NoSuchAlgorithmException;
 
     /**
      * 用户登录
@@ -26,6 +26,6 @@ public interface UserService extends IService<User> {
      * @param userPassword
      * @return
      */
-    User doLogin(String userAccount, String userPassword, HttpServletRequest request);
+    User userLogin(String userAccount, String userPassword, HttpServletRequest request);
 
 }
