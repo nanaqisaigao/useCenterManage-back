@@ -12,6 +12,8 @@ import java.security.NoSuchAlgorithmException;
 * @createDate 2024-05-24 15:23:03
 */
 public interface UserService extends IService<User> {
+
+
     /**
      * @param userAccount   用户账户
      * @param userPassword  用户密码
@@ -28,4 +30,5 @@ public interface UserService extends IService<User> {
      */
     User userLogin(String userAccount, String userPassword, HttpServletRequest request);
 
+    User getSafetyUser(User user);
 }

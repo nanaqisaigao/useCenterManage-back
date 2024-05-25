@@ -14,10 +14,10 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.nio.charset.StandardCharsets;
 import java.security.NoSuchAlgorithmException;
-import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.example.useCenterManageback.constant.UserConstant.USER_LOGIN_STATE;
 import static com.sun.activation.registries.LogSupport.log;
 
 /**
@@ -36,7 +36,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     /**
      * 用户登录状态
      */
-    private final static String USER_LOGIN_STATE = "userLoginState";
 
     @Resource
     private UserMapper userMapper;
@@ -117,6 +116,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
             return null;
         }
         //3.用户脱敏
+        User safetyUser = getSafetyUser(user);
+        //4.记录用户登录状态
+        request.getSession().setAttribute(USER_LOGIN_STATE, safetyUser);
+        //5.返回脱敏后用户信息
+        return safetyUser;
+    }
+    /**
+     * 用户脱敏
+     * @param user
+     * @return
+     */
+    @Override
+    public User getSafetyUser(User user){
         User safetyUser = new User();
         safetyUser.setId(user.getId());
         safetyUser.setUsername(user.getUsername());
@@ -127,11 +139,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         safetyUser.setEmail(user.getEmail());
         safetyUser.setUserStatus(0);
         safetyUser.setCreateTime(user.getCreateTime());
-        //4.记录用户登录状态
-        request.getSession().setAttribute(USER_LOGIN_STATE, safetyUser);
-        //5.返回脱敏后用户信息
+        safetyUser.setUserRole(user.getUserRole());
         return safetyUser;
     }
+
+
 }
 
 
