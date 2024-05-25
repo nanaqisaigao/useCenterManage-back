@@ -1,10 +1,8 @@
 package com.example.useCenterManageback;
 
 import com.example.useCenterManageback.mapper.UserMapper;
-import com.example.useCenterManageback.model.User;
-import javafx.application.Application;
+import com.example.useCenterManageback.model.domain.User;
 import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,12 +1,16 @@
 spring:
-    application:
+  application:
     name: userCenterManage-back
   # DataSource Config
-    datasource:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/galaxy
-      username: root
-      password: lyqllLPPQUXX88
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/galaxy
+    username: root
+    password: lyqllLPPQUXX88
 
-    server:
-      port: 8080
+server:
+  port: 8080
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
