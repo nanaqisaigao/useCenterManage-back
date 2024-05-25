@@ -62,7 +62,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         //3.插入数据
         User user = new User();
         user.setUserAccount(userAccount);
-        user.setUserPassword(userPassword);
+        user.setUserPassword(passwordMD5);
         boolean saveResult = this.save(user);//用userMapper.insert也行
 
         return !saveResult ? -1 : user.getId();

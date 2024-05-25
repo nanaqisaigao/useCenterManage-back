@@ -37,7 +37,10 @@ class UserServiceTest {
 
     }
 
-
+    /**
+     * 测试用户注册接口是否正常
+     * @throws NoSuchAlgorithmException
+     */
     @Test
     void userRegister() throws NoSuchAlgorithmException {
         String userAccount = "piao";
