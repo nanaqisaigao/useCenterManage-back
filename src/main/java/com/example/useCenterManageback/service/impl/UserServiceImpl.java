@@ -41,7 +41,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     private UserMapper userMapper;
 
     @Override
-    public Long userRegister(String userAccount, String userPassword, String checkPassword) throws NoSuchAlgorithmException {
+    public Long userRegister(String userAccount, String userPassword, String checkPassword,String comment) throws NoSuchAlgorithmException {
         //1.校验
         if (StringUtils.isAnyBlank(userAccount, userPassword, checkPassword)) {
             return  (long)-1;
@@ -75,6 +75,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         User user = new User();
         user.setUserAccount(userAccount);
         user.setUserPassword(passwordMD5);
+        user.setComment(comment);
         boolean saveResult = this.save(user);//用userMapper.insert也行
 
         return !saveResult ? -1 : user.getId();
@@ -129,6 +130,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
      */
     @Override
     public User getSafetyUser(User user){
+        if(user == null){
+            return null;
+        }
         User safetyUser = new User();
         safetyUser.setId(user.getId());
         safetyUser.setUsername(user.getUsername());
@@ -140,7 +144,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         safetyUser.setUserStatus(0);
         safetyUser.setCreateTime(user.getCreateTime());
         safetyUser.setUserRole(user.getUserRole());
+        safetyUser.setComment(user.getComment());
         return safetyUser;
+    }
+
+    /**
+     * 请求用户注销
+     * @param request
+     * @return
+     */
+    @Override
+    public int userLogout(HttpServletRequest request) {
+        request.getSession().removeAttribute(USER_LOGIN_STATE);
+        return 1;
     }
 
 

@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Setter
 public class UserRegisterRequest implements Serializable {
     private static final long serialVersionUID = -2930593011248162395L;
-    private String userAccount, userPassword, checkPassword;
+    private String userAccount, userPassword, checkPassword,comment;
 
 
 }

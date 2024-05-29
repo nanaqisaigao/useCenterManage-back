@@ -20,7 +20,7 @@ public interface UserService extends IService<User> {
      * @param checkPassword 校验密码
      * @return
      */
-    Long userRegister(String userAccount, String userPassword, String checkPassword) throws NoSuchAlgorithmException;
+    Long userRegister(String userAccount, String userPassword, String checkPassword,String comment) throws NoSuchAlgorithmException;
 
     /**
      * 用户登录
@@ -31,4 +31,6 @@ public interface UserService extends IService<User> {
     User userLogin(String userAccount, String userPassword, HttpServletRequest request);
 
     User getSafetyUser(User user);
+
+    int userLogout(HttpServletRequest request);
 }

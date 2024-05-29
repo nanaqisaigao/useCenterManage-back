@@ -54,10 +54,11 @@ class UserServiceTest {
 
         String userPassword = "12345678";
         String checkPassword = "12345678";
+        String comment = "hello";
         long resultid;
         if (flag == 1) {
             //正常情况
-            resultid = userService.userRegister(userAccount, userPassword, checkPassword);
+            resultid = userService.userRegister(userAccount, userPassword, checkPassword,comment);
             Assertions.assertTrue(resultid > 0);
         }
         /**
@@ -65,15 +66,15 @@ class UserServiceTest {
          */
         //账户长度不小于四位断言
         userAccount = "pu";
-        resultid = userService.userRegister(userAccount, userPassword, checkPassword);
+        resultid = userService.userRegister(userAccount, userPassword, checkPassword,comment);
         Assertions.assertEquals(-1, resultid);
         //账户不含特殊字符
         userAccount = "p**!u";
-        resultid = userService.userRegister(userAccount, userPassword, checkPassword);
+        resultid = userService.userRegister(userAccount, userPassword, checkPassword,comment);
         Assertions.assertEquals(-1, resultid);
         //账户重复
         userAccount = "piao";
-        resultid = userService.userRegister(userAccount, userPassword, checkPassword);
+        resultid = userService.userRegister(userAccount, userPassword, checkPassword,comment);
         Assertions.assertEquals(-1, resultid);
         /**
          * 密码
@@ -82,20 +83,26 @@ class UserServiceTest {
         userAccount = "passLessThanEight";
         userPassword = "123";
         checkPassword = "123";
-        resultid = userService.userRegister(userAccount, userPassword, checkPassword);
+        resultid = userService.userRegister(userAccount, userPassword, checkPassword,comment);
         Assertions.assertEquals(-1, resultid);
         //密码为空断言
         userAccount = "passNull";
         userPassword = "";
-        resultid = userService.userRegister(userAccount, userPassword, checkPassword);
+        resultid = userService.userRegister(userAccount, userPassword, checkPassword,comment);
         Assertions.assertEquals(-1, resultid);
         //两次密码不一样
         userAccount = "pasSame";
         userPassword = "12345678";
         checkPassword = "111111111";
-        resultid = userService.userRegister(userAccount, userPassword, checkPassword);
+        resultid = userService.userRegister(userAccount, userPassword, checkPassword,comment);
         Assertions.assertEquals(-1, resultid);
 
 
+        //新增用户测试   每次用户名都要改
+        userAccount = "commentOk";
+        userPassword = "12345678";
+        checkPassword = "12345678";
+        resultid = userService.userRegister(userAccount, userPassword, checkPassword,comment);
+        Assertions.assertTrue(resultid > 0);
     }
 }

@@ -35,10 +35,11 @@ public class UserController {
         String userAccount = userRegisterRequest.getUserAccount();
         String userPassword = userRegisterRequest.getUserPassword();
         String checkPassword = userRegisterRequest.getCheckPassword();
+        String comment = userRegisterRequest.getComment();
         if (StringUtils.isAnyBlank(userAccount, userPassword, checkPassword)) {
             return null;
         }
-        return userService.userRegister(userAccount, userPassword, checkPassword);
+        return userService.userRegister(userAccount, userPassword, checkPassword,comment);
     }
 
     @PostMapping("/login")
@@ -54,6 +55,28 @@ public class UserController {
         }
         return userService.userLogin(userAccount, userPassword, request);
     }
+    @PostMapping("/logout")
+    public Integer userLogout(HttpServletRequest request) throws NoSuchAlgorithmException {
+        //判断是否为空
+        if (request == null) {
+            return null;
+        }
+        return userService.userLogout(request);
+    }
+
+    @GetMapping("/current")
+    public User getCurrentUser(HttpServletRequest request){
+        Object userObject = request.getSession().getAttribute(UserConstant.USER_LOGIN_STATE);
+        User currentUser = (User) userObject;
+        if(currentUser == null)
+            return  null;
+
+        long userId = currentUser.getId();
+        //TODO 校验用户是否合法
+        User user = userService.getById(userId);
+        return userService.getSafetyUser(user);
+    }
+
 
     @GetMapping("/search")
     public List<User> searchUser(String username, HttpServletRequest request) {
@@ -98,6 +121,9 @@ public class UserController {
         }
         return true;
     }
+
+
+
 
 
 }
