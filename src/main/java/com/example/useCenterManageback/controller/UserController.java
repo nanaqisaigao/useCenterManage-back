@@ -1,14 +1,21 @@
 package com.example.useCenterManageback.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.example.useCenterManageback.common.BaseResponse;
+import com.example.useCenterManageback.common.ErrorCode;
+import com.example.useCenterManageback.common.ResultUtils;
 import com.example.useCenterManageback.constant.UserConstant;
+import com.example.useCenterManageback.exception.BusinessException;
 import com.example.useCenterManageback.model.domain.User;
 import com.example.useCenterManageback.model.request.UserLoginRequest;
 import com.example.useCenterManageback.model.request.UserRegisterRequest;
 import com.example.useCenterManageback.service.UserService;
+import com.sun.xml.internal.bind.v2.TODO;
 import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.View;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -25,64 +32,71 @@ public class UserController {
 
     @Resource
     private UserService userService;
+    @Autowired
+    private View error;
 
     @PostMapping("/register")
-    public Long userRegister(@RequestBody UserRegisterRequest userRegisterRequest) throws NoSuchAlgorithmException {
+    public BaseResponse<Long> userRegister(@RequestBody UserRegisterRequest userRegisterRequest) throws NoSuchAlgorithmException {
         //判断是否为空
         if (userRegisterRequest == null) {
-            return null;
+//            return ResultUtils.error(ErrorCode.NUll_ERROR);
+            throw new BusinessException(ErrorCode.NUll_ERROR,"请求为空");
         }
         String userAccount = userRegisterRequest.getUserAccount();
         String userPassword = userRegisterRequest.getUserPassword();
         String checkPassword = userRegisterRequest.getCheckPassword();
         String comment = userRegisterRequest.getComment();
         if (StringUtils.isAnyBlank(userAccount, userPassword, checkPassword)) {
-            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR,"必要参数存在空值");
         }
-        return userService.userRegister(userAccount, userPassword, checkPassword,comment);
+        long result = userService.userRegister(userAccount, userPassword, checkPassword,comment);
+        return ResultUtils.success(result);
     }
 
     @PostMapping("/login")
-    public User userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request) throws NoSuchAlgorithmException {
+    public BaseResponse<User> userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request) throws NoSuchAlgorithmException {
         //判断是否为空
         if (userLoginRequest == null) {
-            return null;
+            throw new BusinessException(ErrorCode.NUll_ERROR,"请求为空");
         }
         String userAccount = userLoginRequest.getUserAccount();
         String userPassword = userLoginRequest.getUserPassword();
         if (StringUtils.isAnyBlank(userAccount, userPassword)) {
-            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR,"必要参数存在空值");
         }
-        return userService.userLogin(userAccount, userPassword, request);
+        User result = userService.userLogin(userAccount, userPassword, request);
+        return ResultUtils.success(result);
     }
     @PostMapping("/logout")
-    public Integer userLogout(HttpServletRequest request) throws NoSuchAlgorithmException {
+    public BaseResponse<Integer> userLogout(HttpServletRequest request) throws NoSuchAlgorithmException {
         //判断是否为空
         if (request == null) {
-            return null;
+            throw new BusinessException(ErrorCode.NUll_ERROR,"请求为空");
         }
-        return userService.userLogout(request);
+        Integer result=userService.userLogout(request);
+        return ResultUtils.success(result);
     }
 
     @GetMapping("/current")
-    public User getCurrentUser(HttpServletRequest request){
+    public BaseResponse<User> getCurrentUser(HttpServletRequest request){
         Object userObject = request.getSession().getAttribute(UserConstant.USER_LOGIN_STATE);
         User currentUser = (User) userObject;
         if(currentUser == null)
-            return  null;
+            throw new BusinessException(ErrorCode.NOT_LOGIN,"当前无用户");
 
         long userId = currentUser.getId();
         //TODO 校验用户是否合法
         User user = userService.getById(userId);
-        return userService.getSafetyUser(user);
+        User result = userService.getSafetyUser(user);
+        return ResultUtils.success(result);
     }
 
 
     @GetMapping("/search")
-    public List<User> searchUser(String username, HttpServletRequest request) {
+    public BaseResponse<List<User>> searchUser(String username, HttpServletRequest request) {
         //仅管理员可以查询
         if(isAdmin(request)==false){
-            return new ArrayList<>();
+            return ResultUtils.success(new ArrayList<>());//cccccccccccccc
         }
 
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
@@ -90,22 +104,24 @@ public class UserController {
             queryWrapper.like("username", username);
         }
         List<User> userList = userService.list(queryWrapper);
-        return userList.stream()
+        List<User> result = userList.stream()
                 .map(user ->  userService.getSafetyUser(user))
                 .collect(Collectors.toList());
+        return ResultUtils.success(result);
 
     }
 
     @PostMapping("/delete")
-    public boolean deleteUser(@RequestBody long id,HttpServletRequest request) {
+    public BaseResponse<Boolean> deleteUser(@RequestBody long id,HttpServletRequest request) {
         //仅管理员可以查询
         if(isAdmin(request)==false){
-            return false;
+            throw new BusinessException(ErrorCode.NO_AUTH,"当前用户没有权限");
         }
         if (id <= 0) {
-            return false;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR,"不存在此用户");
         }
-        return userService.removeById(id);
+        Boolean result = userService.removeById(id);
+        return ResultUtils.success(result);
     }
 
     /**
