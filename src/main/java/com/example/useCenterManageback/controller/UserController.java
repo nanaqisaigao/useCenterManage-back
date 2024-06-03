@@ -10,8 +10,6 @@ import com.example.useCenterManageback.model.domain.User;
 import com.example.useCenterManageback.model.request.UserLoginRequest;
 import com.example.useCenterManageback.model.request.UserRegisterRequest;
 import com.example.useCenterManageback.service.UserService;
-import com.sun.xml.internal.bind.v2.TODO;
-import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
