@@ -1,0 +1,406 @@
+POST http://localhost:8080/api/user/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=8FFCBE696DB9FDCB8A0A60B147CD5438
+
+{
+  "userAccount": "piao",
+  "userPassword": "12345678"
+}
+
+<> 2024-05-27T170022.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=8FFCBE696DB9FDCB8A0A60B147CD5438
+
+{
+  "userAccount": "piao",
+  "userPassword": "12345678"
+}
+
+<> 2024-05-27T170003.404.html
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=70907C67F3C867E48F10A3543E61FF3D
+
+{
+  "userAccount": "piao",
+  "userPassword": "12345678"
+}
+
+<> 2024-05-27T165312.200.json
+
+###
+
+POST http://localhost:8080/user/delete
+Content-Type: application/json
+Content-Length: 14
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=70907C67F3C867E48F10A3543E61FF3D
+
+{
+  "id": 1
+
+}
+
+<> 2024-05-25T233101.400.json
+
+###
+
+POST http://localhost:8080/user/delete
+Content-Type: application/json
+Content-Length: 12
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=70907C67F3C867E48F10A3543E61FF3D
+
+{
+"id" : 1
+}
+
+<> 2024-05-25T233033.400.json
+
+###
+
+POST http://localhost:8080/user/delete
+Content-Type: application/json
+Content-Length: 12
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=70907C67F3C867E48F10A3543E61FF3D
+
+{
+"id" : 1
+}
+
+<> 2024-05-25T232638.400.json
+
+###
+
+GET http://localhost:8080/user/search
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=70907C67F3C867E48F10A3543E61FF3D
+content-length: 0
+
+<> 2024-05-25T232626.200.json
+
+###
+
+POST http://localhost:8080/user/delete
+Content-Type: application/json
+Content-Length: 12
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=70907C67F3C867E48F10A3543E61FF3D
+
+{
+"id" : 1
+}
+
+<> 2024-05-25T232616.400.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=9988193427CA830AA7E8A57EE076DC5B
+
+{
+"userAccount": "piao",
+"userPassword": "12345678"
+
+}
+
+<> 2024-05-25T232611.200.json
+
+###
+
+POST http://localhost:8080/user/delete
+Content-Type: application/json
+Content-Length: 12
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=9988193427CA830AA7E8A57EE076DC5B
+
+{
+"id" : 1
+}
+
+<> 2024-05-25T232045.400.json
+
+###
+
+POST http://localhost:8080/user/delete
+Content-Type: application/json
+Content-Length: 12
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=9988193427CA830AA7E8A57EE076DC5B
+
+{
+"id" : 1
+}
+
+<> 2024-05-25T231939.400.json
+
+###
+
+POST http://localhost:8080/user/delete
+Content-Type: application/json
+Content-Length: 14
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=9988193427CA830AA7E8A57EE076DC5B
+
+{
+"id" : "1"
+}
+
+<> 2024-05-25T231500.400.json
+
+###
+
+POST http://localhost:8080/user/delete
+Content-Type: application/json
+Content-Length: 12
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=9988193427CA830AA7E8A57EE076DC5B
+
+{
+"id" : 1
+}
+
+<> 2024-05-25T231101.400.json
+
+###
+
+POST http://localhost:8080/user/delete
+Content-Type: application/json
+Content-Length: 14
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=9988193427CA830AA7E8A57EE076DC5B
+
+{
+"id" : "1"
+}
+
+<> 2024-05-25T231014.400.json
+
+###
+
+GET http://localhost:8080/user/search
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=9988193427CA830AA7E8A57EE076DC5B
+content-length: 0
+
+<> 2024-05-25T230845.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=9988193427CA830AA7E8A57EE076DC5B
+
+{
+"userAccount": "piao",
+"userPassword": "12345678"
+
+}
+
+<> 2024-05-25T230839.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=9988193427CA830AA7E8A57EE076DC5B
+
+{
+"userAccount": "piao",
+"userPassword": "12345678"
+
+}
+
+<> 2024-05-25T230829.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=9988193427CA830AA7E8A57EE076DC5B
+
+{
+"userAccount": "piao",
+"userPassword": "12345678"
+
+}
+
+<> 2024-05-25T230738.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=9988193427CA830AA7E8A57EE076DC5B
+
+{
+"userAccount": "piao",
+"userPassword": "12345678"
+
+}
+
+<> 2024-05-25T230459.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=18EA7ECA0284FE3FD56F5311F8003404
+
+{
+"userAccount": "piao",
+"userPassword": "12345678"
+
+}
+
+<> 2024-05-25T230433.200.json
+
+###
+
+GET http://localhost:8080/user/search
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=18EA7ECA0284FE3FD56F5311F8003404
+content-length: 0
+
+<> 2024-05-25T224557.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=18EA7ECA0284FE3FD56F5311F8003404
+
+{
+"userAccount": "piao",
+"userPassword": "12345678"
+
+}
+
+<> 2024-05-25T224534.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=517B583DCA9208D92ED5091A46E96AB4
+
+{
+"userAccount": "piao",
+"userPassword": "12345678"
+
+}
+
+<> 2024-05-25T224524.200.json
+
+###
+
+GET http://localhost:8080/user/search
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=534F9113EC9724A4E208E8EA89A01848
+content-length: 5
+
+{
+
+
+}
+
+<> 2024-05-25T224438.200.json
+
+###
+
+POST http://localhost:8080/user/login
+Content-Type: application/json
+Content-Length: 54
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+"userAccount": "piao",
+"userPassword": "12345678"
+
+}
+
+<> 2024-05-25T213018.200.json
+
+###
+

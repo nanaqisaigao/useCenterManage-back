@@ -1,0 +1,6 @@
+{
+  "timestamp": "2024-05-25T15:11:01.631+00:00",
+  "status": 400,
+  "error": "Bad Request",
+  "path": "/user/delete"
+}

@@ -1,0 +1,15 @@
+{
+  "id": 4,
+  "username": null,
+  "userAccount": "piao",
+  "avatarUrl": null,
+  "gender": null,
+  "userPassword": null,
+  "phone": null,
+  "email": null,
+  "userStatus": 0,
+  "createTime": "2024-05-25T06:52:29.000+00:00",
+  "updateTime": null,
+  "isDelete": null,
+  "userRole": 1
+}

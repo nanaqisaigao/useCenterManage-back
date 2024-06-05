@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "username": "ljp",
+    "userAccount": "123",
+    "avatarUrl": "https://picsum.photos/id/237/200/300",
+    "gender": 0,
+    "userPassword": "xxx",
+    "phone": "123",
+    "email": "456",
+    "userStatus": 0,
+    "createTime": "2024-05-25T02:42:22.000+00:00",
+    "updateTime": "2024-05-25T02:42:22.000+00:00",
+    "isDelete": 0,
+    "userRole": 0
+  },
+  {
+    "id": 4,
+    "username": null,
+    "userAccount": "piao",
+    "avatarUrl": null,
+    "gender": null,
+    "userPassword": "12a7633921b6713f5245221aae5c23aa",
+    "phone": null,
+    "email": null,
+    "userStatus": 0,
+    "createTime": "2024-05-25T06:52:29.000+00:00",
+    "updateTime": "2024-05-25T14:12:19.000+00:00",
+    "isDelete": 0,
+    "userRole": 1
+  }
+]
