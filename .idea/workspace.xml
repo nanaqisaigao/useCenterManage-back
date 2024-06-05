@@ -21,6 +21,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nanaqisaigao&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nanaqisaigao/useCenterManage-back.git&quot;,
+    &quot;accountId&quot;: &quot;0c32171a-e68d-48ff-ad1b-58d00537d3c4&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://C:/Program Files/Java/jdk1.8.0_333/src.zip!/java/util/regex/Matcher.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../../../maven/repository/com/baomidou/mybatis-plus-annotation/3.5.2/mybatis-plus-annotation-3.5.2.jar!/com/baomidou/mybatisplus/annotation/TableField.class" root0="SKIP_INSPECTION" />
@@ -69,9 +81,10 @@
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.UseCenterManageBackApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UseCenterManageBackApplication.executor&quot;: &quot;Debug&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/28044/Desktop/demoWeb&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -180,6 +193,7 @@
       <workItem from="1716977953438" duration="8858000" />
       <workItem from="1717207363724" duration="27023000" />
       <workItem from="1717396062966" duration="22664000" />
+      <workItem from="1717571994105" duration="749000" />
     </task>
     <task id="LOCAL-00001" summary="登录接口写完">
       <option name="closed" value="true" />
