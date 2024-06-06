@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d280794a-cea4-4dea-a05d-771c80f20b1c" name="Changes" comment="打包完成" />
+    <list default="true" id="d280794a-cea4-4dea-a05d-771c80f20b1c" name="Changes" comment="打包完成">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/useCenterManageback/common/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/useCenterManageback/service/RedisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,48 +69,50 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP Request.All in rest-api_1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.rest-api_1 | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.rest-api_1 | #2.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.rest-api_1 | #3.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SampleTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SampleTest.testSelect.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.testAddUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.userRegister.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.useCenterManage-back [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.useCenterManage-back [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.useCenterManage-back [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.useCenterManage-back [package].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.UseCenterManageBackApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/28044/Desktop/demoWeb&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.29655173&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.All in rest-api_1.executor": "Run",
+    "HTTP Request.rest-api_1 | #1.executor": "Run",
+    "HTTP Request.rest-api_1 | #2.executor": "Run",
+    "HTTP Request.rest-api_1 | #3.executor": "Run",
+    "JUnit.RedisTest.test.executor": "Run",
+    "JUnit.RedisTest.testString.executor": "Run",
+    "JUnit.SampleTest.executor": "Run",
+    "JUnit.SampleTest.testSelect.executor": "Run",
+    "JUnit.UserServiceTest.testAddUser.executor": "Run",
+    "JUnit.UserServiceTest.userRegister.executor": "Run",
+    "Maven.useCenterManage-back [clean].executor": "Run",
+    "Maven.useCenterManage-back [compile].executor": "Run",
+    "Maven.useCenterManage-back [install].executor": "Run",
+    "Maven.useCenterManage-back [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.UseCenterManageBackApplication.executor": "Debug",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/28044/Desktop/demoWeb",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.29655173",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -115,15 +124,41 @@
       <recent name="com.example.useCenterManageback.model.request" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.UseCenterManageBackApplication">
+  <component name="RunManager" selected="JUnit.RedisTest.test">
     <configuration name="rest-api_1 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="rest-api_1 | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" index="2" requestIdentifier="#2" runType="Run single request">
-      <method v="2" />
+    <configuration name="RedisTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="useCenterManage-back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.useCenterManageback.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.useCenterManageback.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.useCenterManageback.service.RedisTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="rest-api_1 | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" index="3" requestIdentifier="#3" runType="Run single request">
-      <method v="2" />
+    <configuration name="RedisTest.testString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="useCenterManage-back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.useCenterManageback.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.useCenterManageback.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.useCenterManageback.service.RedisTest" />
+      <option name="METHOD_NAME" value="testString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="UserServiceTest.userRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="useCenterManage-back" />
@@ -156,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RedisTest.test" />
+        <item itemvalue="JUnit.RedisTest.testString" />
         <item itemvalue="Spring Boot.UseCenterManageBackApplication" />
         <item itemvalue="JUnit.UserServiceTest.userRegister" />
         <item itemvalue="HTTP Request.rest-api_1 | #1" />
-        <item itemvalue="HTTP Request.rest-api_1 | #3" />
-        <item itemvalue="HTTP Request.rest-api_1 | #2" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +229,7 @@
       <workItem from="1717207363724" duration="27023000" />
       <workItem from="1717396062966" duration="22664000" />
       <workItem from="1717571994105" duration="749000" />
-      <workItem from="1717573367625" duration="898000" />
+      <workItem from="1717573367625" duration="11234000" />
     </task>
     <task id="LOCAL-00001" summary="登录接口写完">
       <option name="closed" value="true" />
