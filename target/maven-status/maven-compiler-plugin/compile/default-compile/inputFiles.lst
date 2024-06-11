@@ -11,4 +11,5 @@ D:\project\GitHub\useCenterManage-back\src\main\java\com\example\useCenterManage
 D:\project\GitHub\useCenterManage-back\src\main\java\com\example\useCenterManageback\common\ErrorCode.java
 D:\project\GitHub\useCenterManage-back\src\main\java\com\example\useCenterManageback\controller\UserController.java
 D:\project\GitHub\useCenterManage-back\src\main\java\com\example\useCenterManageback\exception\GlobalHttpHandler.java
+D:\project\GitHub\useCenterManage-back\src\main\java\com\example\useCenterManageback\common\RedisConfig.java
 D:\project\GitHub\useCenterManage-back\src\main\java\com\example\useCenterManageback\service\UserService.java

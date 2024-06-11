@@ -1,6 +1,11 @@
 spring:
   application:
     name: userCenterManage-back
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  profiles:
+    active: dev
   # DataSource Config
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -10,10 +15,12 @@ spring:
   #Session失效时间
   session:
     timeout: 86400
+    store-type: redis
   redis:
    host: 127.0.0.1
    port: 6379
    password: 123456
+   database: 0
    lettuce:
       pool:
         max-active: 8 #最大连接
@@ -24,6 +31,7 @@ server:
   port: 8080
   servlet:
     context-path: /api
+
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: false

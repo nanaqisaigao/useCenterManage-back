@@ -6,7 +6,9 @@ com\example\useCenterManageback\service\UserService.class
 com\example\useCenterManageback\model\domain\User.class
 com\example\useCenterManageback\mapper\UserMapper.class
 com\example\useCenterManageback\common\BaseResponse.class
+com\example\useCenterManageback\config\WebAppMvcConfig.class
 com\example\useCenterManageback\service\impl\UserServiceImpl.class
+com\example\useCenterManageback\config\SwaggerConfig.class
 com\example\useCenterManageback\common\ErrorCode.class
 com\example\useCenterManageback\exception\BusinessException.class
 com\example\useCenterManageback\exception\GlobalHttpHandler.class

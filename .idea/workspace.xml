@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d280794a-cea4-4dea-a05d-771c80f20b1c" name="Changes" comment="打包完成">
+    <list default="true" id="d280794a-cea4-4dea-a05d-771c80f20b1c" name="Changes" comment="改了下表，这些东西不知道是啥">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/useCenterManageback/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/useCenterManageback/config/WebAppMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/a006e58e-82fd-4fc8-b0eb-bc0a26ec5d5b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a006e58e-82fd-4fc8-b0eb-bc0a26ec5d5b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/useCenterManageback/UseCenterManageBackApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/useCenterManageback/UseCenterManageBackApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/useCenterManageback/UseCenterManageBackApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/useCenterManageback/UseCenterManageBackApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/useCenterManage-back-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/useCenterManage-back-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/useCenterManage-back-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/useCenterManage-back-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +91,7 @@
     "JUnit.SampleTest.testSelect.executor": "Run",
     "JUnit.UserServiceTest.testAddUser.executor": "Run",
     "JUnit.UserServiceTest.userRegister.executor": "Run",
+    "Maven.findPartner-backend [package].executor": "Run",
     "Maven.useCenterManage-back [clean].executor": "Run",
     "Maven.useCenterManage-back [compile].executor": "Run",
     "Maven.useCenterManage-back [install].executor": "Run",
@@ -92,7 +106,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/28044/Desktop/demoWeb",
+    "last_opened_file_path": "D:/project/GitHub/findPartner-backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,10 +132,11 @@
       <recent name="com.example.useCenterManageback.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.useCenterManageback.config" />
       <recent name="com.example.useCenterManageback.model.request" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RedisTest.test">
+  <component name="RunManager" selected="Spring Boot.UseCenterManageBackApplication">
     <configuration name="rest-api_1 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -188,9 +203,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.UseCenterManageBackApplication" />
         <item itemvalue="JUnit.RedisTest.test" />
         <item itemvalue="JUnit.RedisTest.testString" />
-        <item itemvalue="Spring Boot.UseCenterManageBackApplication" />
         <item itemvalue="JUnit.UserServiceTest.userRegister" />
         <item itemvalue="HTTP Request.rest-api_1 | #1" />
       </list>
@@ -226,7 +241,9 @@
       <workItem from="1717207363724" duration="27023000" />
       <workItem from="1717396062966" duration="22664000" />
       <workItem from="1717571994105" duration="749000" />
-      <workItem from="1717573367625" duration="17265000" />
+      <workItem from="1717573367625" duration="17496000" />
+      <workItem from="1717674120310" duration="925000" />
+      <workItem from="1718085042530" duration="5189000" />
     </task>
     <task id="LOCAL-00001" summary="登录接口写完">
       <option name="closed" value="true" />
@@ -276,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717414790210</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="改了下表，这些东西不知道是啥">
+      <option name="closed" value="true" />
+      <created>1717661449060</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717661449060</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +326,8 @@
     <MESSAGE value="注册增加了可以添加留言，基础功能已经实现完成" />
     <MESSAGE value="增加了统一的返回值，全局异常统一抛出，异常全局处理（设定了前端显示的异常值）" />
     <MESSAGE value="打包完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="打包完成" />
+    <MESSAGE value="改了下表，这些东西不知道是啥" />
+    <option name="LAST_COMMIT_MESSAGE" value="改了下表，这些东西不知道是啥" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
